@@ -21,15 +21,39 @@ body {
   .card {
     font-family: 'Josefin Sans', sans-serif;
     height: 300px;
-    width: 300px;
+    width: 350px;
     padding: 20px;
     margin: 10px;
     border-radius: 35px;
     color: white;
-    background: rgba(0, 0, 0, 0.600);
+    background: #00000080;
     .search {
       input {
+        font-family: inherit;
+        font-size: 17px;
+        width: 80%;
+        height: 35px;
+        padding-left: 15px;
+        outline: none;
+        border: none;
+        border-radius: 20px;
         color: white;
+        background-color: #252525cb;
+      }
+      button {
+        width: 40px;
+        height: 35px;
+        border: none;
+        border-radius: 50%;
+        background-color: #252525cb;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+        i {
+          color: var(--color-secondary);
+        }
+      }
+      button:hover {
+        background-color: #333333cb;
       }
     }
   }
@@ -90,7 +114,7 @@ body {
     position: absolute;
     top: 3%;
     left: 10%;
-    background: #0af;
+    background: #00aaff;
     width: 1500px;
     height: 1300px;
     margin-left: -150px;

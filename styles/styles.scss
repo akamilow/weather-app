@@ -20,13 +20,14 @@ body {
   height: 100vh;
   .card {
     font-family: 'Josefin Sans', sans-serif;
-    height: 300px;
+    height: auto;
     width: 350px;
     padding: 20px;
     margin: 10px;
     border-radius: 35px;
     color: white;
     background: #00000080;
+
     .search {
       input {
         font-family: inherit;
@@ -39,6 +40,9 @@ body {
         border-radius: 20px;
         color: white;
         background-color: #252525cb;
+      } input::placeholder {
+        color: var(--color-secondary);
+        opacity: .6;
       }
       button {
         width: 40px;
@@ -51,54 +55,38 @@ body {
         i {
           color: var(--color-secondary);
         }
+      } button:hover {
+        background-color: #3d3d3dcb;
       }
-      button:hover {
-        background-color: #333333cb;
+    }
+
+    .weather {
+      text-align: center;
+      .description {
+        text-transform: capitalize;
+        font-weight: 550;
       }
+      div {
+        margin-bottom: 10px;
+      }
+      h1 {
+        margin-bottom: 0;
+      }
+    } 
+    .weather.loading {
+      visibility: hidden;
+      max-height: 50px;
+      position: relative;
+    }
+    .weather.loading::after {
+      visibility: visible;
+      content: "Loading...";
+      position: absolute;
+      top: 0;
+      left: 0;
     }
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // BACKGROUND ANIMATION //
 .box {
